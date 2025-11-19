@@ -1,0 +1,152 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji"; */
+  font-family: 'Montserrat', sans-serif;
+}
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  /* Start AnimatedBtn button*/
+  .AnimatedBtn {
+    /* padding: 8px 16px 8px 16px; */
+    /* font-family: 'Fira Sans'; */
+    /* font-weight: 500; */
+    /* display: inline-block; */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+   
+  .AnimatedBtn:before {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    background: #fff;
+    border-radius: 999px;
+    transition: .6s;
+  }
+  
+  .AnimatedBtn:hover {
+    color: #443C68;
+    border: 2px solid #443C68;
+  }
+  
+  .AnimatedBtn:hover:before {
+    width: 100%;
+    left: 0;
+  }
+
+  
+  .AnimatedGradientBtn {
+    /* padding: 8px 16px 8px 16px; */
+    /* font-family: 'Fira Sans'; */
+    /* font-weight: 500; */
+    /* display: inline-block; */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+    
+  .AnimatedGradientBtn:before {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    /* background: linear-gradient(45deg, rgb(86, 199, 218), rgb(252, 214, 11)); */
+    background: linear-gradient(45deg, #fcd60b, #56c7da);
+    /* border-radius: 999px; */
+    border-radius: 5px;
+    transition: .6s;
+  }
+  
+  .AnimatedGradientBtn:hover {
+    /* color: #443C68; */
+    /* border: 2px solid #443C68; */
+    color: #ffffff;
+    /* border: 2px solid #fbfbfb; */
+  }
+  
+  .AnimatedGradientBtn:hover:before {
+    width: 100%;
+    left: 0;
+  }
+  /* End AnimatedBtn button*/
+  
+  
+  /* Start Toast Notification*/
+  [data-sonner-toast][data-styled=true] [data-close-button] {
+    position: absolute;
+    left: var(--toast-close-button-end) !important;
+    right: var(--toast-close-button-start) !important;
+    top: 13px !important;
+  }
+  
+  [data-sonner-toast][data-styled=true] {
+    padding: 8px !important;
+  }
+  
+  .gud-sonner [data-sonner-toast][data-styled=true] {
+    border-radius: 8px;
+    padding-right: 8px !important;
+    box-shadow: 0 18px 32px rgba(0, 0, 0, 0.35);
+    background-color: #ffffff !important;
+    border-color: #F4F6F8 !important;
+    color: #000 !important;
+  }
+  
+  .gud-sonner [data-sonner-toast][data-styled=true] [data-icon] {
+    display: flex;
+    height: 2.75rem !important;
+    width: 2.75rem !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: 600;
+    background-color: #f6f0e8;
+    color: #7a4b1b;
+    box-shadow: inset 0 4px 12px rgba(255, 255, 255, 0.65);
+  }
+  
+  .gud-sonner [data-sonner-toast][data-styled=true] [data-icon] svg {
+    width: 25px !important;
+    height: 25px !important;
+  }
+  
+  .gud-sonner [data-sonner-toast][data-type='success'] [data-icon] {
+    background-color: #C8FAD6 !important;
+    color: #00A76F !important;
+  }
+  
+  .gud-sonner [data-sonner-toast][data-type='info'] [data-icon] {
+    background-color: #CAFDF5 !important;
+    color: #00B8D9 !important;
+  }
+  
+  .gud-sonner [data-sonner-toast][data-type='warning'] [data-icon] {
+    background-color: #FFF5CC !important;
+    color: #FFAB00 !important;
+  }
+  
+  .gud-sonner [data-sonner-toast][data-type='error'] [data-icon] {
+    background-color: #FFE9D7 !important;
+    color: #FF5630 !important;
+  }
+  /* End Toast Notification*/
